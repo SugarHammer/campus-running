@@ -1,0 +1,73 @@
+<!--pages/my/index.wxml-->
+<view class="outermost-layer-tab">
+  <view class="header">
+    
+  </view>
+  <view class="personal">
+      <view class="card">
+        <view class="card_portrait">
+          <image src="{{ userInformation.userImg || 'https://s1.ax1x.com/2023/02/03/pSsaIPI.png'}}" class="img" bindtap="fillIn"></image>
+        </view>
+        <view class="button-primary"></view>
+
+        <view class="card_dataFrom" wx:if="{{ cardFlag }}">
+          <view class="datafrom_name" bindtap="fillIn">{{ userInformation.username || '设置用户昵称' }}</view>
+          <view class="datafrom_autograph" bindtap="fillIn">
+            ta很懒，什么都没有留下~~~<van-icon name="edit" size="17" style="margin-left: 13rpx;"/>
+          </view>
+        </view>
+        <view class="card_btn" wx:else>
+          <van-button type="primary" color="#17B3A39b" block bindtap="login">登 录</van-button>
+        </view>
+      </view>
+      <view class="card apply">
+          <view class="index_icon">
+            <view class="centered_icon" bindtap="nameList">
+              <view class="icon_top">
+                <text class="iconfont icon-dianhua" style="color: #17B3A3;"></text>
+              </view>
+              <view style="font-size: 24rpx; font-weight: 600;">
+                封禁名单  
+              </view>
+            </view>
+            <view class="centered_icon" bindtap="announce">
+              <view class="icon_top">
+                <text class="iconfont icon-gonggao" style="color: #17B3A3;"></text>
+              </view>
+              <view style="font-size: 24rpx; font-weight: 600;">
+                公告  
+              </view>
+            </view>
+            <view class="centered_icon" bindtap="handMessage">
+              <view class="icon_top">
+                <text class="iconfont icon-liuyantousu" style="color: #17B3A3;"></text>
+              </view>
+              <view style="font-size: 24rpx; font-weight: 600;">
+                留言反馈
+              </view>
+            </view>
+            <view class="centered_icon"  bindtap="leaveMessage">
+              <view class="icon_top">
+                <text class="iconfont icon-liebiao" style="color: #17B3A3;"></text>
+              </view>
+              <view style="font-size: 24rpx; font-weight: 600;" >
+                留言列表  
+              </view>
+            </view>
+            <view class="centered_icon" bindtap="logOut" wx:if="{{ cardFlag }}">
+              <view class="icon_top">
+                <text class="iconfont icon-tuichu" style="color: #17B3A3;"></text>
+              </view>
+              <view style="font-size: 24rpx; font-weight: 600;" >
+                退出登录  
+              </view>
+            </view>
+          </view>
+      </view>
+  </view>
+  <view>
+    
+    <!-- <van-button type="primary" color="#17B3A3" block bindtap="logOut" wx:if="{{ cardFlag }}">退出登录</van-button> -->
+  </view>
+</view>
+  

@@ -1,0 +1,95 @@
+@import "../../static/ali-icon/index.wxss";
+.outermost-layer-tab {
+  background-color: #c4f9db;
+  background-image: linear-gradient(185deg, #188e81 0%, #fbf7e2 100%);
+  position: relative;
+}
+.van-button--primary {
+  border-radius: 100rpx !important;
+  height: 100rpx !important;
+  width: 50% !important;
+}
+.header {
+  height: 400rpx;
+  background: #17B3A3;
+  position: relative;
+}
+/* .icon-tuichudenglu {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+} */
+.personal {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 93%;
+}
+.card {
+  height: 350rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+}
+.card_portrait {
+  width: 160rpx;
+  height: 160rpx;
+  background: #b5f3ff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button-primary {
+  height: 140rpx;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.card_dataFrom {
+    text-align: center;
+    line-height: 55rpx;
+}
+.datafrom_name {
+  font-size: 43rpx;
+  font-weight: 700;
+}
+.datafrom_autograph {
+  font-size: 28rpx;
+}
+
+.apply {
+  margin-top: 30rpx;
+  height: 300rpx;
+}
+
+.index_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.centered_icon {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon_top {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  /* background: #00ff0063; */
+  line-height: 60rpx;
+  text-align: center;
+}
+.iconfont {
+  font-size: 60rpx;
+  color: #00909d;
+}

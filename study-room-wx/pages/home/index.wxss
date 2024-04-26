@@ -1,0 +1,56 @@
+@import "../../static/ali-icon/index.wxss";
+.outermost-layer-tab {
+  /* background-color: #c4f9db;
+  background-image: linear-gradient(147deg, #c4f9db 0%, #fbf7e2 100%); */
+  position: relative;
+}
+
+/* 轮播 */
+.page-section {
+  height: 500rpx;
+}
+.page-section-spacing {
+  height: 500rpx;
+}
+.van-image__img {
+  width: 100%;
+}
+
+/* 预定 */
+.reserve {
+  font-size: 50rpx;
+  font-weight: 600;
+  text-align: center;
+  /* height: 200rpx; */
+  line-height: 120rpx;
+}
+.van-button--primary {
+  border-radius: 100rpx !important;
+  width: 65% !important;
+}
+
+
+
+/* 公告 */
+.journalism {
+  margin-top: 60rpx;
+}
+.introduce {
+  padding-left: 30rpx;
+  margin-bottom: 70rpx;
+}
+.introduce_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.city {
+  padding: 0;
+}
+.sign {
+  width: 10rpx;
+  height: 10rpx;
+  background: black;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}

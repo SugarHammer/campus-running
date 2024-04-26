@@ -1,0 +1,60 @@
+message:
+  import:
+    error: "信息导入失败"
+  form:
+    save:
+      error: "表单添加失败"
+    update:
+      error: "表单修改失败"
+    delete:
+      error: "表单删除失败"
+    mount:
+      error: "表单挂载失败"
+      
+
+
+  get:
+    error: "信息获取失败"
+
+  user:
+    not:
+      exists: "用户不存在/密码错误"
+      competence: "无权限操作"
+    password:
+      delete: "对不起，您的账号已被删除"
+    blocked:
+      error: "用户已封禁，请联系管理员"
+    code-fail:
+      error: "验证码不正确"
+    already:
+      exists: "该用户电话号码已存在"
+    account:
+      exists: "该账号已存在"
+      
+
+  energyItem:
+    exists: "分类分项代码已存在"
+
+  dataCenter:
+    exists: "数据中心代码已存在"
+
+  data:
+    exists: "代码已存在"
+
+  basSite:
+    code:
+      exists: "编码已存在"
+
+  basDevice:
+    code:
+      exists: "设备编码已存在"
+
+  department:
+    exists:
+      user: "该部门存在用户,不能删除"
+
+  label:
+    name:
+      exists: "标签名称已存在"
+    exists:
+      use: "该标签在使用中，不能被删除"

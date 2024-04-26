@@ -1,0 +1,58 @@
+<view class="outermost-layer-tab">
+  <!-- 轮播图 -->
+  <view class="page-section swiper">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="#ffffff"  indicator-active-color="#17B3A3" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="page-section-spacing">
+      <block wx:for="{{backgroundSwiper}}" wx:key="*this">
+        <swiper-item>
+            <van-image width="100%" height="100%" src="{{ item }}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view style="margin-top: 20px;" class="reserve centered">
+    <!-- <view>校园跑腿预约</view> -->
+    <van-button type="primary" color="#17B3A3" block bindtap="regionCheck">校园跑腿预约</van-button>
+  </view>
+
+ 
+
+  <view class="journalism centered">
+    <!-- <view class="pt-page-title">
+      <view>
+        校园跑腿预约办法
+      </view>
+    </view>
+    <view class="introduce">
+        <view class="introduce_title" wx:for="{{journalismList}}" wx:key="*this">
+          <span class="sign"></span>
+          <span>{{ item.text }}</span>
+        </view>
+    </view> -->
+    <view class="pt-page-title">
+      <view>
+        管理办法
+      </view>
+    </view>
+    <view class="introduce">
+        <view class="introduce_title" wx:for="{{matter}}" wx:key="*this">
+          <span style="padding-bottom: 7rpx;">{{ item.text }}</span>
+        </view>
+    </view>
+    <view class="pt-page-title">
+      <view>
+        地址
+      </view>
+    </view>
+    <view class="introduce city">
+        <view class="introduce_title">
+          <span>山东省潍坊市 XXXX校园跑腿预约</span>
+        </view>
+    </view>
+  </view>
+
+  <view class="centered" style="margin-top: 20rpx;">
+    
+  </view>
+    
+</view>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.selfstudy.modules.applet.dao.TbTokenDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.selfstudy.modules.applet.entity.TbTokenEntity" id="tbTokenMap">
+        <result property="userId" column="user_id"/>
+        <result property="token" column="token"/>
+        <result property="expireTime" column="expire_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    <select id="queryByToken" resultMap="tbTokenMap">
+        select * from tb_token where token = #{value}
+    </select>
+
+
+</mapper>

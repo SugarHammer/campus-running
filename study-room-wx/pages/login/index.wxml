@@ -1,0 +1,44 @@
+<view class="outermost-layer">
+  <view class="login-background-text">
+    <view class="login-box">
+      <view class="user-login">
+        用户登录
+        <view class="before"></view>
+      </view>
+      <view class="login-explain">
+        登录以使用更多服务
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="login-from">
+      <van-cell-group>
+        <van-field value="{{ dataAccountFrom.account }}" placeholder="请输入账号" border="{{ true }}" data-sign="account" bind:change="onChange"/>
+
+        <van-field value="{{ dataAccountFrom.password }}" placeholder="请输入密码" border="{{ true }}" data-sign="password" bind:change="onChange" type="password" />
+      </van-cell-group>
+    </view>
+  </view>
+
+  <view>
+    <view class="login-button">
+      <van-button type="primary" color="#17B3A3" block bindtap="accountLogin">登录</van-button>
+      <view class="registration">
+        <span bindtap="jumpRegister">立即注册</span>
+      </view>        
+    </view>
+  </view>
+
+  <view>
+    <view class="other-login">
+      <view>  
+        <van-divider contentPosition="center">微信快速登录</van-divider>
+      </view>
+      <view>
+        <text class="iconfont icon-weixin" bindtap="login"></text>
+      </view>
+    </view>
+  </view>
+</view>
+  

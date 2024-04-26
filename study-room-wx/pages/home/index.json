@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-image": "/libs/vant-ui/image/index",
+    "van-icon": "/libs/vant-ui/icon/index",
+    "van-row": "/libs/vant-ui/row/index",
+    "van-col": "/libs/vant-ui/col/index",
+    "van-button": "/libs/vant-ui/button/index"
+  },
+  "navigationBarTitleText": "校园跑腿预约管理"
+}

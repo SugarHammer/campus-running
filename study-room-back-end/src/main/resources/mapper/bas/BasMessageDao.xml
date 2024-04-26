@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.selfstudy.modules.bas.dao.BasMessageDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.selfstudy.modules.bas.entity.BasMessageEntity" id="basMessageMap">
+        <result property="id" column="id"/>
+        <result property="message" column="message"/>
+        <result property="messageType" column="message_type"/>
+        <result property="userId" column="user_id"/>
+        <result property="messageTime" column="message_time"/>
+    </resultMap>
+    <select id="queryByHelper" resultType="com.selfstudy.modules.bas.entity.BasMessageEntity">
+        select *
+        from bas_message
+        <where>
+            <if test="queryDTO.messageType != null">
+                and message_type = #{queryDTO.messageType}
+            </if>
+        </where>
+        order by message_time desc
+    </select>
+
+
+</mapper>

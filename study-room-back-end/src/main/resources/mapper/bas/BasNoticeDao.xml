@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.selfstudy.modules.bas.dao.BasNoticeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+<!--    <resultMap type="com.selfstudy.modules.bas.entity.BasNoticeEntity" id="basNoticeMap">-->
+<!--        <result property="noticeId" column="notice_id"/>-->
+<!--        <result property="noticeContent" column="notice_content"/>-->
+<!--        <result property="noticeImg" column="notice_img"/>-->
+<!--        <result property="createUserId" column="create_user_id"/>-->
+<!--        <result property="createTime" column="create_time"/>-->
+<!--        <result property="updateTime" column="update_time"/>-->
+<!--        <result property="deleteFlag" column="delete_flag"/>-->
+<!--    </resultMap>-->
+    <select id="queryByHelper" resultType="com.selfstudy.modules.bas.entity.BasNoticeEntity">
+        select * from bas_notice where delete_flag = 0 and notice_state = 0
+        <if test="basNoticeQueryDTO.noticeState != null">
+            and notice_state = #{basNoticeQueryDTO.noticeState}
+        </if>
+        <if test="basNoticeQueryDTO.noticeTitle != null and basNoticeQueryDTO.noticeTitle != ''">
+            and instr(notice_title, #{basNoticeQueryDTO.noticeTitle}) > 0
+        </if>
+    </select>
+
+    <select id="listNotice" resultType="com.selfstudy.modules.bas.entity.BasNoticeEntity">
+        select *
+        from bas_notice where delete_flag = 0 and notice_state = 0
+        order by sort asc
+    </select>
+
+
+</mapper>

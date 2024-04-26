@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.selfstudy.modules.bas.dao.BasSeatDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.selfstudy.modules.bas.entity.BasSeatEntity" id="basSeatMap">
+        <result property="seatId" column="seat_id"/>
+        <result property="roomId" column="room_id"/>
+        <result property="seatName" column="seat_name"/>
+        <result property="roomState" column="room_state"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="deleteFlag" column="delete_flag"/>
+        <result property="deleteUserId" column="delete_user_id"/>
+        <result property="deleteTime" column="delete_time"/>
+    </resultMap>
+    <select id="queryByHelper" resultType="com.selfstudy.modules.bas.vo.BasSeatVO">
+        select
+               *
+        from bas_seat bs
+        left join bas_study_room  bsr
+        on bs.room_id = bsr.room_id
+        where bs.delete_flag = 0
+        <if test="queryDTO.roomState != null">
+            and bs.room_state = #{queryDTO.roomState}
+        </if>
+        <if test="queryDTO.seatName != null and queryDTO.seatName != ''">
+            and bs.seat_name like CONCAT('%',#{queryDTO.seatName},'%')
+        </if>
+        <if test="queryDTO.roomName != null and queryDTO.roomName != ''">
+            and bsr.room_name like CONCAT('%',#{queryDTO.roomName},'%')
+        </if>
+    </select>
+    <select id="getSeatID" resultType="java.lang.Long">
+        select seat_id from bas_appointment where delete_flag = 0
+        and id in
+        <foreach collection="list" item="id" open="(" close=")" separator=",">
+         #{id}
+        </foreach>
+    </select>
+
+
+</mapper>
