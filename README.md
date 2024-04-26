@@ -23,7 +23,7 @@ SpringBoot + Mybatis + Vue + Mysql + 微信小程序
 #### 功能概览图
 ![输入图片说明](photo/%E5%8A%9F%E8%83%BD%E5%9B%BE.png)
 
-### 演示截图
+### 部分功能演示
 #### 小程序端功能
 ![输入图片说明](photo/%E7%94%A8%E6%88%B7%E5%8A%9F%E8%83%BD.gif)
 
